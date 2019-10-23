@@ -4,6 +4,22 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <h1>Hola mundo</h1>
+<ion-content padding color="dark">
+    <ion-list color="dark">
+        <ion-item (click)="listaSeleccionada(item)" *ngFor="let item of  deseosService.listas" detail>
+            <ion-label>{{item.titulo}}</ion-label>
+            <ion-label slot="end" color="tertiary">{{item.items.length}} items</ion-label>
+        </ion-item>
+    </ion-list>
+    <!--
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="tertiary">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>-->
+    <ion-fab right bottom>
+        <button ion-fab color="tertiary" (click)="irAgregar()">
+        <ion-icon ios="ios-add" md="md-add"></ion-icon>
+        </button>
+    </ion-fab>
 </ion-content>
