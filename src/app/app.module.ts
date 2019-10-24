@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DeseosProvider } from '../providers/deseos/deseos';
 import { AgregarPage } from '../pages/agregar/agregar';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,12 @@ import { AgregarPage } from '../pages/agregar/agregar';
     AboutPage,
     HomePage,
     TabsPage,
-    AgregarPage
-  ],
+    AgregarPage,
+    ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

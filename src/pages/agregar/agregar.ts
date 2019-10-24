@@ -52,6 +52,7 @@ export class AgregarPage {
       this.lista.terminadaEn = null;
       this.lista.completada = false;
     }
+    console.log(pendientes);
     this.deseosService.guardarStorage();
   }
 

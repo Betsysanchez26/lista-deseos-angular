@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { DeseosProvider } from '../../providers/deseos/deseos';
-import { Lista } from '../../app/models/lista.model';
 import { AgregarPage } from '../agregar/agregar';
 
 @Component({
@@ -9,6 +8,8 @@ import { AgregarPage } from '../agregar/agregar';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  completada: boolean = false;
   constructor(public navCtrl: NavController,
     public deseosService : DeseosProvider,
     public alertController: AlertController
@@ -50,10 +51,5 @@ export class HomePage {
     await alert.present();
     //this.navCtrl.push(AgregarPage);
   }
-
-  listaSeleccionada(lista: Lista){
-    this.navCtrl.push(AgregarPage,{listaId:lista.id});
-  }
-
 
 }

@@ -8,6 +8,7 @@ import { DeseosProvider } from '../../providers/deseos/deseos';
 })
 export class AboutPage {
 
+  completada: boolean = true;
   constructor(public navCtrl: NavController, public deseosService: DeseosProvider) {
 
   }

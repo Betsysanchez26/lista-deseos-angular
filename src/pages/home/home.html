@@ -5,12 +5,7 @@
 </ion-header>
 
 <ion-content padding color="dark">
-    <ion-list color="dark">
-        <ion-item (click)="listaSeleccionada(item)" *ngFor="let item of  deseosService.listas" detail>
-            <ion-label>{{item.titulo}}</ion-label>
-            <ion-label slot="end" color="tertiary">{{item.items.length}} items</ion-label>
-        </ion-item>
-    </ion-list>
+    <app-listas [completada]="completada"></app-listas>
     <!--
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button color="tertiary">
